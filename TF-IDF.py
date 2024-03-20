@@ -7,6 +7,7 @@ Probably overfitting
 '''
 
 import pandas as pd
+import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
@@ -14,8 +15,15 @@ from sklearn.metrics import accuracy_score
 from sklearn.naive_bayes import MultinomialNB
 
 # Load the CSV data 
-file_path = "C:\\Users\\eodyd\\Downloads\\archive\\dataset.csv"  # Path to the file
+file_path = "dataset.csv"  
 data = pd.read_csv(file_path)
+
+## Load the json data
+#file_path = "dataset.json" 
+#with open(file_path, 'r') as file:
+#    json_data = json.load(file)
+
+#data = pd.DataFrame(json_data)
 
 # Split the data into features and target
 X = data['text']
