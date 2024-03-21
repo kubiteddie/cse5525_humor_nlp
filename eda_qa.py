@@ -1,8 +1,8 @@
 import json
+import random
 
-
-def printQA(file):
-    data = json.load(open(file, encoding='utf8'))
+def printQA(qafile, jokefile):
+    data = json.load(open(qafile, encoding='utf8'))
     qas = list()
 
     for item in data['data']:
@@ -13,12 +13,15 @@ def printQA(file):
                 curr['answer'] = qa['answers'][0]['text']
                 curr['humor'] = False
                 qas.append(curr)
-                    # f.write("Question: " + qa['question'] + "\n")
-                    # f.write("Answer: " + qa['answers'][0]['text'] + "\n\n")
-                    # qas.append((qa['question'], qa['answers'][0]['text']))
-                
-    with open('Questions_and_Answers.json', 'w', encoding='utf8') as f:
-        json.dump(qas, f, indent=4)
+
+    data2 = json.load(open(jokefile, encoding='utf8'))
+    for joke in data2:        
+        if len(joke['body']) > 255:
+            currjoke = dict()
+            currjoke['question'] = joke['title']
+            currjoke['answer'] = joke['body']
+            currjoke['humor'] = True
+            qas.append(currjoke)
 
     return qas
 
@@ -27,6 +30,16 @@ questions = json.load(open('train-v1.1.json', encoding='utf8'))
 with open('clean_train.json', 'w') as newfile:
     json.dump(questions, newfile, indent=2)
 
-file = "clean_train.json"
-qas = printQA(file)
-#print(qas)
+qafile = "clean_train.json"
+jokefile = 'reddit_jokes.json'
+qas = printQA(qafile, jokefile)
+random.seed(83)
+random.shuffle(qas)
+id=0
+
+for item in qas:
+    item['id'] = id
+    id += 1
+
+with open('Questions_and_Answers.json', 'w', encoding='utf8') as f:
+    json.dump(qas, f, indent=4)
