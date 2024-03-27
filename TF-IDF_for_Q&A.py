@@ -61,6 +61,8 @@ for sample in samples:
 # User input test
 user_question = input("Enter your question: ")
 user_answer = input("Enter the answer: ")
+print("The user question was: ", user_question)
+print("The user answer was: ", user_answer)
 
 prediction_result = predict_humor(user_question, user_answer)
 print(f"The question/answer pair is: {prediction_result}")

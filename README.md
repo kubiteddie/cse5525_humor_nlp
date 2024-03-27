@@ -10,3 +10,4 @@ running_data.py - prints out dataset containing mix of jokes and non-jokes, with
 TF-IDF_for_Q&A.py - Applied TF-IDF and logistic regression to the Q&A json file, shows super high accuracy but does not really work on real examples
 (Could be the problem of the data set or the TF-IDF method or both)
 
+Example outputs provided as PDFs for both running_data.py and TF-IDF_for_Q&A.py. 
