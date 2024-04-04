@@ -30,8 +30,8 @@ questions = json.load(open('train-v1.1.json', encoding='utf8'))
 with open('clean_train.json', 'w') as newfile:
     json.dump(questions, newfile, indent=2)
 
-qafile = "clean_train.json"
-jokefile = 'reddit_jokes.json'
+qafile = "datastore/clean_train.json"
+jokefile = 'datastore/reddit_jokes.json'
 qas = printQA(qafile, jokefile)
 random.seed(83)
 random.shuffle(qas)
@@ -41,5 +41,5 @@ for item in qas:
     item['id'] = id
     id += 1
 
-with open('Questions_and_Answers.json', 'w', encoding='utf8') as f:
+with open('datastore/Questions_and_Answers.json', 'w', encoding='utf8') as f:
     json.dump(qas, f, indent=4)

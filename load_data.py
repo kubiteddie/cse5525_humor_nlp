@@ -3,7 +3,7 @@ import pandas as pd
 
 def load_data(json_file):
     column_names = ['question', 'answer', 'humor']
-    f = open('Questions_and_Answers.json')
+    f = open('datastore/Questions_and_Answers.json')
     data = json.load(f)
     rows = []
 

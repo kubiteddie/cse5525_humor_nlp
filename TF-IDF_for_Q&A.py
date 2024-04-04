@@ -12,7 +12,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 # Load the data
-file_path = 'Questions_and_Answers.json'
+file_path = 'datastore/Questions_and_Answers.json'
 
 with open(file_path, 'r') as file:
     data = json.load(file)

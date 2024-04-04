@@ -16,7 +16,7 @@ from sklearn.naive_bayes import MultinomialNB
 from load_data import load_data
 
 # Load the CSV data 
-file_path = "dataset.csv"  
+file_path = "datastore/dataset.csv"  
 data = pd.read_csv(file_path)
 
 ## Load the json data
@@ -33,8 +33,8 @@ y = data_df['humor']
 print(len(X))
 print(len(y))
 # Convert the text into numerical features using TF-IDF
-# vectorizer = TfidfVectorizer()
-# X = vectorizer.fit_transform(X)
+vectorizer = TfidfVectorizer()
+X = vectorizer.fit_transform(X)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
