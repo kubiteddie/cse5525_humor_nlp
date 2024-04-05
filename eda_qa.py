@@ -5,6 +5,7 @@ def printQA(qafile, jokefile):
     data = json.load(open(qafile, encoding='utf8'))
     qas = list()
 
+    facts = 0
     for item in data['data']:
         for pg in item['paragraphs']:
             for qa in pg['qas']:
@@ -13,25 +14,30 @@ def printQA(qafile, jokefile):
                 curr['answer'] = qa['answers'][0]['text']
                 curr['humor'] = False
                 qas.append(curr)
+                facts = facts + 1
 
+    jokes = 0
     data2 = json.load(open(jokefile, encoding='utf8'))
     for joke in data2:        
-        if len(joke['body']) > 255:
+        if len(joke['Answer']) < 255:
             currjoke = dict()
-            currjoke['question'] = joke['title']
-            currjoke['answer'] = joke['body']
+            currjoke['question'] = joke['Question']
+            currjoke['answer'] = joke['Answer']
             currjoke['humor'] = True
             qas.append(currjoke)
+            jokes = jokes + 1
+
+    print(f'indexed {facts} factual QAs and {jokes} humor QAs')
 
     return qas
 
-questions = json.load(open('train-v1.1.json', encoding='utf8'))
+questions = json.load(open('datastore/train-v1.1.json', encoding='utf8'))
 
-with open('clean_train.json', 'w') as newfile:
+with open('datastore/clean_train.json', 'w') as newfile:
     json.dump(questions, newfile, indent=2)
 
 qafile = "datastore/clean_train.json"
-jokefile = 'datastore/reddit_jokes.json'
+jokefile = 'datastore/jokes_4-5-2024.json'
 qas = printQA(qafile, jokefile)
 random.seed(83)
 random.shuffle(qas)
