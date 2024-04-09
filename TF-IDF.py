@@ -11,18 +11,13 @@ import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score , classification_report, f1_score, confusion_matrix
 from sklearn.naive_bayes import MultinomialNB
 from load_data import load_data
 
 # Load the CSV data 
 file_path = "datastore/dataset.csv"  
 data = pd.read_csv(file_path)
-
-## Load the json data
-#file_path = "dataset.json" 
-#with open(file_path, 'r') as file:
-#    json_data = json.load(file)
 
 data_df = load_data(file_path)
 
@@ -42,22 +37,37 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 lr_model = LogisticRegression(max_iter=1000)
 lr_model.fit(X_train, y_train)
 
-# Initialize and train the Naive Bayes model
-nb_model = MultinomialNB()
-nb_model.fit(X_train, y_train)
+y_pred = lr_model.predict(X_test)
 
-lr_pred = lr_model.predict(X_test)
-nb_pred = nb_model.predict(X_test)
+overall_accuracy = accuracy_score(y_test, y_pred)
+print("Overall Accuracy:", overall_accuracy)
 
-print(f"Logistic Regression Accuracy: {accuracy_score(y_test, lr_pred):.2f}")
-print(f"Naive Bayes Accuracy: {accuracy_score(y_test, nb_pred):.2f}")
+f1_score_humor = f1_score(y_test, y_pred, pos_label=1)
+print("F1-score for Humor:", f1_score_humor)
+
+tn, fp, fn, tp = confusion_matrix(y_test, y_pred).ravel()
+humor_accuracy = tp / (tp + fn)
+print("Humor-specific Accuracy:", humor_accuracy)
+fact_accuracy = tn / (tn + fp)
+print("Fact-specific Accuracy:", fact_accuracy)
+
+# f1 score for joke
+f1_joke = f1_score(y_test, y_pred, pos_label=1)
+print("F1 Score (Joke):", f1_joke)
+
+# accuracy for the joke
+joke_accuracy = accuracy_score(y_test[y_test == 1], y_pred[y_test == 1])
+print("Accuracy (Joke):", joke_accuracy)
+
+# accuracy for the statement
+fact_accuracy = accuracy_score(y_test[y_test == 0], y_pred[y_test == 0])
+print("Accuracy (Statement):", fact_accuracy)
 
 # Function to classify new sentences with all models
 def classify_sentence(sentence):
     sentence_vector = vectorizer.transform([sentence])
     predictions = {
-        "Logistic Regression": "Joke" if lr_model.predict(sentence_vector)[0] else "Not a Joke",
-        "Naive Bayes": "Joke" if nb_model.predict(sentence_vector)[0] else "Not a Joke"
+        "Logistic Regression": "Joke" if lr_model.predict(sentence_vector)[0] else "Not a Joke"
     }
     return predictions
 

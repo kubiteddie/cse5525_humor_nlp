@@ -9,7 +9,7 @@ import json
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report, f1_score, confusion_matrix
 
 # Load the data
 file_path = 'datastore/Questions_and_Answers.json'
@@ -36,9 +36,18 @@ model.fit(X_train_tfidf, y_train)
 # Predict and evaluate
 y_pred = model.predict(X_test_tfidf)
 
-accuracy = accuracy_score(y_test, y_pred)
+overall_accuracy = accuracy_score(y_test, y_pred)
+print(f"Overall Accuracy: {overall_accuracy:.4f}")
 
-print("Accuracy:", accuracy)
+f1_score_humor = f1_score(y_test, y_pred, pos_label=1)
+print(f"F1-score for Humor: {f1_score_humor:.4f}")
+
+tn, fp, fn, tp = confusion_matrix(y_test, y_pred).ravel()
+humor_accuracy = tp / (tp + fn)
+print(f"Humor-specific Accuracy: {humor_accuracy:.4f}")
+fact_accuracy = tn / (tn + fp)
+print(f"Fact-specific Accuracy: {fact_accuracy:.4f}")
+
 
 # Function for testing
 def predict_humor(question, answer):
