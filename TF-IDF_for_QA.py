@@ -6,6 +6,7 @@ Could be the problem of the data set or the TF-IDF method or both.
 '''
 
 import json
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -48,31 +49,9 @@ print(f"Humor-specific Accuracy: {humor_accuracy:.4f}")
 fact_accuracy = tn / (tn + fp)
 print(f"Fact-specific Accuracy: {fact_accuracy:.4f}")
 
+# Save the trained model and vectorizer
+joblib.dump(model, 'datastore/humor_classifier.pkl')
+joblib.dump(vectorizer, 'datastore/vectorizer.pkl')
 
-# Function for testing
-def predict_humor(question, answer):
-    combined_text = question + " " + answer
-    transformed_text = vectorizer.transform([combined_text])
-    prediction = model.predict(transformed_text)
-    return "Humor" if prediction[0] == 1 else "Fact"
-
-# sample question/answer pairs
-samples = [
-    {"question": "who was the first president of the united states", "answer": "George Washington."},
-    {"question": "What do you call a magic dog?", "answer": "A labracadabrador."}
-]
-
-for sample in samples:
-    print("Q:", sample["question"])
-    print("A:", sample["answer"])
-    print("Prediction:", predict_humor(sample["question"], sample["answer"]), "\n")
-
-# User input test
-user_question = input("Enter your question: ")
-user_answer = input("Enter the answer: ")
-print("The user question was: ", user_question)
-print("The user answer was: ", user_answer)
-
-prediction_result = predict_humor(user_question, user_answer)
-print(f"The question/answer pair is: {prediction_result}")
+print("Model training completed and saved.")
 
