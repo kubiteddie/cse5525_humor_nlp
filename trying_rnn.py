@@ -8,6 +8,9 @@ import torch.optim as optim
 import numpy as np
 from models.LSTM import LSTMClassifier
 
+# Simple RNN model for Humor Detection
+# Credit for help with the code: https://jaketae.github.io/study/pytorch-rnn/
+
 class RNN(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(RNN, self).__init__()
