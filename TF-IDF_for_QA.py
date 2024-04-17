@@ -1,7 +1,5 @@
 '''
-Applied TF-IDF and logistic regression to the Q&A json file.
-shows super high accuracy but does not really work on real examples.
-Could be the problem of the data set or the TF-IDF method or both.
+Applied TF-IDF and LinearSVC to the Q&A json file.
 
 '''
 
@@ -9,7 +7,7 @@ import json
 import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score, classification_report, f1_score, confusion_matrix
 
 # Load the data
@@ -26,12 +24,12 @@ labels = [1 if entry['humor'] else 0 for entry in data]
 X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
 
 # Apply TF-IDF vectorization
-vectorizer = TfidfVectorizer(max_features=5000)
+vectorizer = TfidfVectorizer(max_features=50000)
 X_train_tfidf = vectorizer.fit_transform(X_train)
 X_test_tfidf = vectorizer.transform(X_test)
 
 # Train a logistic regression model
-model = LogisticRegression(max_iter=1000)
+model = LinearSVC(max_iter=1000)
 model.fit(X_train_tfidf, y_train)
 
 # Predict and evaluate

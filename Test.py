@@ -19,6 +19,15 @@ def predict_humor(question, answer):
 # sample question/answer pairs
 samples = [
     {"question": "who was the first president of the united states", "answer": "George Washington."},
+    {"question": "What is the chemical formula for water?", "answer": "H2O."},
+    {"question": "Who wrote \"Macbeth\"?", "answer": "William Shakespeare."},
+    {"question": "What is the capital of France?", "answer": "Paris."},
+    {"question": "What planet is known as the Red Planet?", "answer": "Mars."},
+    {"question": "What is the largest mammal in the world?", "answer": "The blue whale."}, # Fact till here
+    {"question": "What do you call fake spaghetti?", "answer": "An impasta."},# Humors from here
+    {"question": "Why can't you give Elsa a balloon?", "answer": "Because she will let it go."},
+    {"question": "Why don't skeletons fight each other?", "answer": "They don't have the guts."},
+    {"question": "What’s orange and sounds like a parrot?", "answer": "A carrot."},
     {"question": "What do you call a magic dog?", "answer": "A labracadabrador."}
 ]
 
