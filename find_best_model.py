@@ -6,6 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import LinearSVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, f1_score, confusion_matrix
+from datetime import datetime
 
 # Load the data
 file_path = 'datastore/Questions_and_Answers.json'
@@ -20,8 +21,10 @@ labels = [1 if entry['humor'] else 0 for entry in data]
 # Split the dataset into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
 
+vocabulary_size = 50000
+
 # Apply TF-IDF vectorization
-vectorizer = TfidfVectorizer(max_features=5000)
+vectorizer = TfidfVectorizer(max_features=vocabulary_size)
 X_train_tfidf = vectorizer.fit_transform(X_train)
 X_test_tfidf = vectorizer.transform(X_test)
 
@@ -32,6 +35,9 @@ models = {
     "Support Vector Machine": LinearSVC(max_iter=1000),
     "Random Forest": RandomForestClassifier(n_estimators=100, max_depth=10)
 }
+
+writeline = "datetime:{}, modeltype:{}, vocabulary size:{}, acc:{}, f1:{}, humoracc:{}, factacc:{}"
+outfile = "datastore/modelscores.txt"
 
 # Train, predict, and evaluate each model
 for name, model in models.items():
@@ -51,3 +57,11 @@ for name, model in models.items():
     fact_accuracy = tn / (tn + fp)
     print(f"Fact-specific Accuracy: {fact_accuracy:.4f}")
     print("\n")
+
+    with open(outfile, 'a+') as evalwrite:
+        evalwrite.write(writeline.format(datetime.now(), name, vocabulary_size, overall_accuracy, f1_score_humor, humor_accuracy, fact_accuracy))
+        evalwrite.write('\n')
+
+with open(outfile, 'a+') as evalwrite:
+    evalwrite.write('\n')
+    evalwrite.write('\n')
