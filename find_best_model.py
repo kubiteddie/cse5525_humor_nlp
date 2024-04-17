@@ -21,7 +21,7 @@ labels = [1 if entry['humor'] else 0 for entry in data]
 # Split the dataset into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
 
-vocabulary_size = 5000
+vocabulary_size = 50000
 
 # Apply TF-IDF vectorization
 vectorizer = TfidfVectorizer(max_features=vocabulary_size)
@@ -61,3 +61,7 @@ for name, model in models.items():
     with open(outfile, 'a+') as evalwrite:
         evalwrite.write(writeline.format(datetime.now(), name, vocabulary_size, overall_accuracy, f1_score_humor, humor_accuracy, fact_accuracy))
         evalwrite.write('\n')
+
+with open(outfile, 'a+') as evalwrite:
+    evalwrite.write('\n')
+    evalwrite.write('\n')
