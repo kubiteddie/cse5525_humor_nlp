@@ -6,6 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import LinearSVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, f1_score, confusion_matrix
+from datetime import datetime
 
 # Load the data
 file_path = 'datastore/Questions_and_Answers.json'
@@ -34,6 +35,9 @@ models = {
     "Support Vector Machine": LinearSVC(max_iter=1000),
     "Random Forest": RandomForestClassifier(n_estimators=100, max_depth=10)
 }
+
+writeline = "datetime:{}, vocabulary size:{}, acc:{}, f1:{}, humoracc:{}, factacc:{}"
+outfile = "datastore/modelscores.txt"
 
 # Train, predict, and evaluate each model
 for name, model in models.items():
