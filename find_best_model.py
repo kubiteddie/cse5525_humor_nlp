@@ -36,7 +36,7 @@ models = {
     "Random Forest": RandomForestClassifier(n_estimators=100, max_depth=10)
 }
 
-writeline = "datetime:{}, vocabulary size:{}, acc:{}, f1:{}, humoracc:{}, factacc:{}"
+writeline = "datetime:{}, modeltype:{}, vocabulary size:{}, acc:{}, f1:{}, humoracc:{}, factacc:{}"
 outfile = "datastore/modelscores.txt"
 
 # Train, predict, and evaluate each model
@@ -57,3 +57,7 @@ for name, model in models.items():
     fact_accuracy = tn / (tn + fp)
     print(f"Fact-specific Accuracy: {fact_accuracy:.4f}")
     print("\n")
+
+    with open(outfile, 'a+') as evalwrite:
+        evalwrite.write(writeline.format(datetime.now(), name, vocabulary_size, overall_accuracy, f1_score_humor, humor_accuracy, fact_accuracy))
+        evalwrite.write('\n')
