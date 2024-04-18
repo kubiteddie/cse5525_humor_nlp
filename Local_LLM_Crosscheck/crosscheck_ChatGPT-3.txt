@@ -1,0 +1,516 @@
+Prompt given to ChatGPT:
+
+    {
+        "question": "What do Gingers and Extinct Dinosaurs have in common?",
+        "answer": "Not enough\"",
+        "id": 0
+    },
+    {
+        "question": "Where was Thuringia in the Middle Ages?",
+        "answer": "the border between Germanic and Slavic territories",
+        "id": 1
+    },
+    {
+        "question": "What is the best part about having sex with twenty eight year-olds?",
+        "answer": "There are twenty of them.",
+        "id": 2
+    },
+    {
+        "question": "When was Feynman allowed to go to Tuva?",
+        "answer": "The day after he died",
+        "id": 3
+    },
+    {
+        "question": "By the late 7th century, what was a main function of Lundenwic?",
+        "answer": "a major port",
+        "id": 4
+    },
+    {
+        "question": "What view became popular of the British people in WWII?",
+        "answer": "people locked in national solidarity.",
+        "id": 5
+    },
+    {
+        "question": "What's better than winning a gold medal at the Special Olympics?",
+        "answer": "Not being ",
+        "id": 6
+    },
+    {
+        "question": "Do you know there is a serial number printed on every condom?",
+        "answer": "I guess you haven't rolled it down far enough.",
+        "id": 7
+    },
+    {
+        "question": "Why can't you email a photo to a Jedi?",
+        "answer": "Because attachments are not allowed. ",
+        "id": 8
+    },
+    {
+        "question": "What was very important to the polish nobility?",
+        "answer": "Coats of arms",
+        "id": 9
+    },
+    {
+        "question": "What did Kerry say affected the ability to know if the results of the Ohio vote was unbiased?",
+        "answer": "\"the widespread irregularities make it impossible to know for certain that the [Ohio] outcome reflected the will of the voters.\"",
+        "id": 10
+    },
+    {
+        "question": "What's a transgender's fabourite pokemon?",
+        "answer": "Unknown",
+        "id": 11
+    },
+    {
+        "question": "In what year was Destry Rides again produced?",
+        "answer": "1939",
+        "id": 12
+    },
+    {
+        "question": "What business closed in Macau?",
+        "answer": "Casinos",
+        "id": 13
+    },
+    {
+        "question": "What do you call a kid with no arms and an eyepatch?",
+        "answer": "Names!",
+        "id": 14
+    },
+    {
+        "question": "What makes the Jewish Monopoly game so much harder than the original?",
+        "answer": "Because the banker starts with all the money and never gives it away.",
+        "id": 15
+    },
+    {
+        "question": "What do you say to a girl with a black eye?",
+        "answer": "Nothing. You already told her.",
+        "id": 16
+    },
+    {
+        "question": "What did Trump say to Obama?",
+        "answer": "Orange is new black [p.s. - not my original, my friend told me this one]",
+        "id": 17
+    },
+    {
+        "question": "What did the abacus say to the adding machine?",
+        "answer": "Calc you later! ",
+        "id": 18
+    },
+    {
+        "question": "What is a legal system older than Catholic law?",
+        "answer": "Roman law",
+        "id": 19
+    },
+    {
+        "question": "In what classification is a person who gives up the chance for a true self and adopts social perceptions of him or herself?",
+        "answer": "The pastiche personality",
+        "id": 20
+    },
+    {
+        "question": "Buddhism seeks to be neither pessimistic or optimistic, but what?",
+        "answer": "realistic",
+        "id": 21
+    },
+    {
+        "question": "Lay people tend to live by the five what?",
+        "answer": "precepts",
+        "id": 22
+    },
+    {
+        "question": "What species declined due to hunting in Afghanistand and Asia?",
+        "answer": "Siberian cranes",
+        "id": 23
+    },
+    {
+        "question": "Can February march?",
+        "answer": "No, but April may.",
+        "id": 24
+    },
+    {
+        "question": "When did the Bethnal Green disaster occur?",
+        "answer": "1943",
+        "id": 25
+    },
+    {
+        "question": "What is the center where the data joins to complete a circle?",
+        "answer": "lock groove",
+        "id": 26
+    },
+    {
+        "question": "What type of arches do they love to use in Venice?",
+        "answer": "they loved flamboyant arches",
+        "id": 27
+    },
+    {
+        "question": "Where dos PWD get it's water from?",
+        "answer": "Delaware River and the balance from the Schuylkill River",
+        "id": 28
+    },
+    {
+        "question": "What does Florida have the largest collection of ",
+        "answer": "the largest collection of Art Deco and Streamline Moderne buildings in both the United States and the entire world, most of which are located in the Miami",
+        "id": 29
+    },
+    {
+        "question": "Where was MacArthur's headquarters moved to in March of 1942?",
+        "answer": "Melbourne",
+        "id": 30
+    },
+    {
+        "question": "How did the Neanderthal dad teach his son how to wear underwear?",
+        "answer": "Color coded: \"Yellow in front, brown in the back\"",
+        "id": 31
+    },
+    {
+        "question": "How many dead babies does it take to paint a wall?",
+        "answer": "Depends on how hard you can throw them.",
+        "id": 32
+    },
+    {
+        "question": "What is one of the complex behaviors pet dogs have gotten from wolves?",
+        "answer": "bite inhibition",
+        "id": 33
+    },
+    {
+        "question": "At what battle did Alexander beat King Porus?",
+        "answer": "Battle of the Hydaspes",
+        "id": 34
+    },
+    {
+        "question": "What hindered the competetive ability of Apple when it was introduced?",
+        "answer": "expensive",
+        "id": 35
+    },
+    {
+        "question": "Why did the dyslexic Italian prisoner of war never get rescued?",
+        "answer": "Because when his commanding officer read his letter saying he was now a WOP, it was assumed that he had expatriated. ",
+        "id": 36
+    },
+    {
+        "question": "In how many nations are Muslims in the majority of people?",
+        "answer": "49",
+        "id": 37
+    },
+    {
+        "question": "What countries do the A12 and A2 connect",
+        "answer": "A12 and A2 motorways connect Amsterdam, Arnhem, The Hague and Maastricht, as well as Belgium and Germany",
+        "id": 38
+    },
+    {
+        "question": "When did East and West Florida Merge ",
+        "answer": "On March 30, 1822, the United States merged East Florida and part of West Florida into the Florida Territory",
+        "id": 39
+    },
+    {
+        "question": "What is a bigot?",
+        "answer": "A bigot is anyone winning an argument with a liberal. ",
+        "id": 40
+    },
+    {
+        "question": "What borders South Raleigh to the west?",
+        "answer": "Cary,",
+        "id": 41
+    },
+    {
+        "question": "Why did On the Origin of Species likely raise so much interest and debate?",
+        "answer": "no sharp line between scientific issues and ideological, social and religious implications",
+        "id": 42
+    },
+    {
+        "question": "How were rebounds of minority enrollment explained in Long's report?",
+        "answer": "increasing minority enrollment in high schools",
+        "id": 43
+    },
+    {
+        "question": "The pitch halfway between C (60) and C\u266f (61) is labeled what?",
+        "answer": "60.5",
+        "id": 44
+    },
+    {
+        "question": "Where did wealthy residents move?",
+        "answer": "suburbs",
+        "id": 45
+    },
+    {
+        "question": "What is Green, Slimy, and smells like Bacon?",
+        "answer": "Kermit's finger.",
+        "id": 46
+    },
+    {
+        "question": "Which of the Gospels most agrees with Athanasius?",
+        "answer": "Gospel of John",
+        "id": 47
+    },
+    {
+        "question": "The population of Greater London in January 2015 was its greatest since what year?",
+        "answer": "1939",
+        "id": 48
+    },
+    {
+        "question": "What was an imported food that provided most of the carbohydrates?",
+        "answer": "Bananas",
+        "id": 49
+    },
+    {
+        "question": "Who were common enimies to both the Khazars and Byzantine Empire?",
+        "answer": "Persians and Arabs",
+        "id": 50
+    },
+    {
+        "question": "What was the Royal Naval Engineering College renamed in 1959?",
+        "answer": "Dockyard Technical College",
+        "id": 51
+    },
+    {
+        "question": "In which two systems can Indigenous education be used?",
+        "answer": "formal and non-formal educational systems",
+        "id": 52
+    },
+    {
+        "question": "In January of 1991 what type of protests were violently curbed?",
+        "answer": "student protests",
+        "id": 53
+    },
+    {
+        "question": "What files was the Citizens' Commission to Investigate the FBI's raid mainly focused on?",
+        "answer": "COINTELPRO program",
+        "id": 54
+    },
+    {
+        "question": "Beyonce's group changed their name to Destiny's Child in what year?",
+        "answer": "1996",
+        "id": 55
+    },
+    {
+        "question": "Which vacuum pump expert helped Swan invent his lamp?",
+        "answer": "Charles Stearn",
+        "id": 56
+    },
+    {
+        "question": "What polymer is a major part of wood?",
+        "answer": "Lignin",
+        "id": 57
+    },
+    {
+        "question": "What's the difference between a cat and a politician?",
+        "answer": "A cat will lie   your face. A politician will lie   your face.",
+        "id": 58
+    },
+    {
+        "question": "What do you get when you cross an insomniac, dyslexic, and agnostic?",
+        "answer": "Someone who stays up wondering if there is a dog.",
+        "id": 59
+    },
+    {
+        "question": "How did the RCC begin their march toward nationalization?",
+        "answer": "starting with the expropriation of British Petroleum's share of the British Petroleum-N.B. Hunt Sahir Field in December 1971.",
+        "id": 60
+    },
+    {
+        "question": "When did the Great Fire of London occur?",
+        "answer": "1666",
+        "id": 61
+    },
+    {
+        "question": "Why are the landmarks in Paris quarantined?",
+        "answer": "Because they are parasites",
+        "id": 62
+    },
+    {
+        "question": "Where did Dell miss out on sales due to relying on the internet?",
+        "answer": "big box stores",
+        "id": 63
+    },
+    {
+        "question": "What do you call a Hawaiian homosexual?",
+        "answer": "A tropical fruit.",
+        "id": 64
+    },
+    {
+        "question": "How did ISIS do on their French test?",
+        "answer": "They bombed it...",
+        "id": 65
+    },
+    {
+        "question": "What works do Creative Commons licenses generally apply to?",
+        "answer": "visual and literary works",
+        "id": 66
+    },
+    {
+        "question": "What did Kermit eat after he got divorced?",
+        "answer": "Pork Chops",
+        "id": 67
+    },
+    {
+        "question": "What is formed between the inductance and the capacitance when the current and the voltage switch direction?",
+        "answer": "a harmonic oscillator",
+        "id": 68
+    },
+    {
+        "question": "What is South Africa's ranking?",
+        "answer": "121st",
+        "id": 69
+    },
+    {
+        "question": "What's the difference between a Catholic and Baptist?",
+        "answer": "A Catholic will say hello to you in a liquor store. ",
+        "id": 70
+    },
+    {
+        "question": "Why isn't anyone afraid of China?",
+        "answer": "....Because everyone knows General Tsao's chicken. Heard from a friend today. :)",
+        "id": 71
+    },
+    {
+        "question": "Who advised Vicotria to begin appaering in public?",
+        "answer": "Her uncle Leopold",
+        "id": 72
+    },
+    {
+        "question": "What motivates an external drum brake held open electrically?",
+        "answer": "spring force",
+        "id": 73
+    },
+    {
+        "question": "How are scratches on a CD fixed?",
+        "answer": "refilling them with similar refractive plastic or by careful polishing",
+        "id": 74
+    },
+    {
+        "question": "What do you call a lobster dressed up as Santa?",
+        "answer": "Santa Claws",
+        "id": 75
+    },
+    {
+        "question": "What is Norfolk Island's Internet country code top-level domain?",
+        "answer": ".nf",
+        "id": 76
+    },
+    {
+        "question": "Photodermatitis, nausea, allergic reactions and anaphylaxis are all what type of side effect?",
+        "answer": "Adverse effects",
+        "id": 77
+    },
+    {
+        "question": "Who relinquished his position as CEO to take a seat on the board?",
+        "answer": "Michael Dell",
+        "id": 78
+    },
+    {
+        "question": "How did the bird get his bluetooth to work?",
+        "answer": "He had to parrot.",
+        "id": 79
+    },
+    {
+        "question": "What was the name of the  council that offered part of the bounty for Captain Every",
+        "answer": "Privy Council",
+        "id": 80
+    },
+    {
+        "question": "When was the International Chopin Piano Competition established?",
+        "answer": "1927",
+        "id": 81
+    },
+    {
+        "question": "Which Carnival is held in Germany's west?",
+        "answer": "The \"Rheinische\"",
+        "id": 82
+    },
+    {
+        "question": "Musical genres that gained popularity in London and elsewhere, such as dubstep, were based on and derived from what?",
+        "answer": "the foreign genres of hip hop and reggae",
+        "id": 83
+    },
+    {
+        "question": "Old joke for Halloween. Why do witches not wear panties?",
+        "answer": "For better grip on the broom",
+        "id": 84
+    },
+    {
+        "question": "What type of philosopher was Descartes?",
+        "answer": "rationalist",
+        "id": 85
+    },
+    {
+        "question": "What kind of environment provides Windows apps extra security?",
+        "answer": "sandboxed environment",
+        "id": 86
+    },
+    {
+        "question": "What test can tell the difference between asthma and COPD?",
+        "answer": "Single-breath diffusing capacity",
+        "id": 87
+    },
+    {
+        "question": "What is Oklahoma's only HBCU?",
+        "answer": "Langston University",
+        "id": 88
+    },
+    {
+        "question": "what do you call a female chihuahua in a salt flat?",
+        "answer": "X. Because he (or she) is a salty little bitch",
+        "id": 89
+    },
+    {
+        "question": "What do you call a kid that stands up to bullies?",
+        "answer": "An ambulance.",
+        "id": 90
+    },
+    {
+        "question": "Why is Rosie O'Donell fat?",
+        "answer": "Because she likes to eat out!",
+        "id": 91
+    },
+    {
+        "question": "Why did Mozart kill all his chickens?",
+        "answer": "Because when he asked them who the greatest composer was all they would say is \"mmmmmm... Bach Bach Bach\"!",
+        "id": 92
+    },
+    {
+        "question": "Where did she receive the news that she was to be queen?",
+        "answer": "sitting-room",
+        "id": 93
+    },
+    {
+        "question": "How well did Kanye do in high school?",
+        "answer": "A's and B's",
+        "id": 94
+    },
+    {
+        "question": "Why do old people read the bible so much?",
+        "answer": "I asked my grandad the other day \"why do old people read the bible so much?\" He replied \"cause we're cramming for finals\"",
+        "id": 95
+    },
+    {
+        "question": "Of what nationality was Jan van Eyck?",
+        "answer": "Netherlandish",
+        "id": 96
+    },
+    {
+        "question": "Who promoted the rights of the Eastern Orthodox Christians?",
+        "answer": "Russia",
+        "id": 97
+    },
+    {
+        "question": "What's a crusader's favourite drink?",
+        "answer": "A Teu-tonic.",
+        "id": 98
+    },
+    {
+        "question": "Hayek believed that which type of democracy was the worst of its alternatives?",
+        "answer": "unlimited",
+        "id": 99
+    },
+Use these 100 question-answer pairs in this json file and determine weather the pair is meant to be humorous or factual. Make an array where each entry is 1 for humor or 0 for fact.
+
+Output:
+[1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 
+ 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 
+ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 
+ 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 
+ 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1]
+
+
+ChatGPT-3.5 identified 54 out of 100 question-answer pairs correctly. Accuracy = 54.00%
+
+It's potential was held back by using a single prompt to determine its accuracy rather than 
+its API. 

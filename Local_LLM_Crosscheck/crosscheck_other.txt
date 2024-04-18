@@ -1,0 +1,11 @@
+Restricted to llama models since I am using llama_cpp in python to test these local LLMS. 
+
+Local LLM llama2_7b_chat_uncensored just spits out a bunch of nonsense. Simply restates the quetion and answer pair then creates other random question and answer pairs without ever answering if it is fact or humor. 
+accuracy = 0%
+
+
+Local LLM wizardlm-1.0-uncensored-llama2-13b would return an object with no response. i.e "content" is empty.
+{'id': 'chatcmpl-eb218a42-bfd9-487e-a79d-0d1ce28924d4', 'object': 'chat.completion', 'created': 1713475616, 'model': 'C:/Users/edgar/Software/LLMs/text-generation-webui-main/models/wizardlm-1.0-uncensored-llama2-13b.Q5_K_M.gguf', 'choices': [{'index': 0, 'message': {'role': 'assistant', 'content': ''}, 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 53, 'completion_tokens': 0, 'total_tokens': 53}}
+
+
+Human performed best with 100% accuracy 
