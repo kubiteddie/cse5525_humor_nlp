@@ -22,13 +22,13 @@ labels = [1 if entry['humor'] else 0 for entry in data]
 # Split the dataset into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
 
-vocabulary_size = 50000
+vocabulary_size = 500
 
 # Apply TF-IDF vectorization
-vectorizer = TfidfVectorizer(max_features=vocabulary_size)
+vectorizer = TfidfVectorizer(max_features=vocabulary_size, stop_words=['What', 'do', 'you', 'call'])
 vectorizer_count = CountVectorizer(max_features=vocabulary_size)
-X_train_tfidf = vectorizer_count.fit_transform(X_train)
-X_test_tfidf = vectorizer_count.transform(X_test)
+X_train_tfidf = vectorizer.fit_transform(X_train)
+X_test_tfidf = vectorizer.transform(X_test)
 
 # Initialize models
 models = {
