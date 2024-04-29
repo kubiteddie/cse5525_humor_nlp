@@ -28,3 +28,6 @@ datetime:2024-04-16 23:28:26.645700, modeltype:Support Vector Machine, vocabular
 datetime:2024-04-16 23:28:30.106691, modeltype:Random Forest, vocabulary size:50000, acc:0.697428139183056, f1:0.008350730688935281, humoracc:0.0041928721174004195, factacc:1.0
 
 
+datetime:2024-04-29 15:38:38.387008, modeltype:Support Vector Machine, vocabulary size:50000, acc:0.9749183852217533, f1:0.958634274458306, humoracc:0.9564989517819706, factacc:0.9829577948072744
+
+

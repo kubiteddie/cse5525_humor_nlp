@@ -1,6 +1,7 @@
 import json
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import LinearSVC
@@ -25,15 +26,16 @@ vocabulary_size = 50000
 
 # Apply TF-IDF vectorization
 vectorizer = TfidfVectorizer(max_features=vocabulary_size)
-X_train_tfidf = vectorizer.fit_transform(X_train)
-X_test_tfidf = vectorizer.transform(X_test)
+vectorizer_count = CountVectorizer(max_features=vocabulary_size)
+X_train_tfidf = vectorizer_count.fit_transform(X_train)
+X_test_tfidf = vectorizer_count.transform(X_test)
 
 # Initialize models
 models = {
-    "Logistic Regression": LogisticRegression(max_iter=1000),
-    "Naive Bayes": MultinomialNB(),
-    "Support Vector Machine": LinearSVC(max_iter=1000),
-    "Random Forest": RandomForestClassifier(n_estimators=100, max_depth=10)
+    #"Logistic Regression": LogisticRegression(max_iter=1000),
+    #"Naive Bayes": MultinomialNB(),
+    "Support Vector Machine": LinearSVC(max_iter=1000)
+    #"Random Forest": RandomForestClassifier(n_estimators=100, max_depth=10)
 }
 
 writeline = "datetime:{}, modeltype:{}, vocabulary size:{}, acc:{}, f1:{}, humoracc:{}, factacc:{}"
